@@ -5,13 +5,13 @@ import {useDispatch, useSelector} from "react-redux";
 import api from "./../../api";
 import {errorFound, resetRepo, searchValue} from "../../redux/userSlice";
 
+// @TODO reset userList response when there is error
+
 const UserList = () => {
     const [ userList, setUsers ] = useState(null);
     const user = useSelector((state) => state.updateValue.userName);
-    const error = useSelector((state) => state.updateValue.error);
     const dispatch = useDispatch();
     let usersList = [];
-
 
 
     useEffect(() => {
@@ -36,7 +36,6 @@ const UserList = () => {
         fetchApi();
     }, [user, userList]);
 
-    console.log(userList)
 
     if (userList != null) {
             usersList = userList.map((user) =>

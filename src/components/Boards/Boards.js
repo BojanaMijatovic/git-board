@@ -8,10 +8,6 @@ const Boards = () => {
     const error = useSelector((state) => state.updateValue.error)
     let modal;
 
-    useEffect(() => {
-
-    }, [error])
-
     if (error === true) {
         modal = <ErrorModal />;
     }
