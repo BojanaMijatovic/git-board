@@ -1,0 +1,90 @@
+.user {
+  &__board {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  // Style for search wrapper
+  &__search-form {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background-color: $search-background-color;
+  }
+
+  &__search-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  &__search-input {
+    margin-top: 20px;
+    padding: 20px 10px;
+    background-color: $search-input-background-color;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  &__search-button {
+    width: 100px;
+    padding: 10px;
+    background-color: $white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  // Style for user list and individual user
+  &__list {
+    flex: 0 0 70%;
+    padding: 30px;
+    background-color: $user-board-background;
+    overflow-y: auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: $white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__avatar {
+    flex: 0 0 70px;
+    margin-right: 20px;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    flex: 1 0 45%;
+  }
+
+  &__name {
+    margin-top: 0;
+  }
+
+  &__description {
+    margin-bottom: 0;
+  }
+}

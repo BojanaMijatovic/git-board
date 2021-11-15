@@ -1,0 +1,40 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: $modal-background;;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: $white;
+  }
+
+  &__button {
+    padding: 10px 15px;
+    background-color: $search-input-background-color;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    align-self: flex-end;
+  }
+
+  &__button-close {
+    align-self: center;
+    margin-top: 30px;
+  }
+}
